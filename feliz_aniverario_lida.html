@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <title>Niver de lidinha</title>
+</head>
+<body>
+    <!--
+        1. Create a TXT record in your DNS configuration for the following hostname: _github-pages-challenge-cancan17.segredo.com
+        2. Use this code for the value of the TXT record: e7ef42da185809f26e7bd51225efb2
+        3. Wait until your DNS configuration changes. This could take up to 24 hours to propagate.
+    -->
+
+   <!--balões-->
+    <div class="parabens">
+
+
+		<div class="baloes">
+
+			<span class="balao-1">				
+			</span>
+
+			<span class="balao-2">				
+			</span>
+
+			<span class="balao-3">				
+			</span>
+
+			<span class="balao-4">				
+			</span>
+
+			<span class="balao-5">				
+			</span>
+
+			<span class="balao-6">				
+			</span>
+
+		</div>
+
+
+		<div class="mensagem">	
+
+			<h1 id="balao">Feliz Aniversário Lidaaa!</h1>
+
+		</div>
+		
+	</div>
+
+ <!------------------------------------------------------>  
+
+    <figure>
+        <img id="lida" src="diversos/f1eb44b7-56fd-4cf5-808d-a3de81884f0f.jfif"  alt="elida maravilhada com o tamanho de sua coxinha" >
+        <img hidden id="weeknd" src="https://images.genius.com/a05a24335cf986f98417f5ec630186a9.999x999x1.png" alt="">
+    </figure>
+    
+    <div class="player-ctrl">
+    
+      <!-- Play Button -->
+      <a id="Musica-play" onclick="playShow()"><i class="ion-ios-play"></i></a>
+    
+      <!-- Pause Button -->
+      <a id="Musica-pause" onclick="pauseShow()" style="display:none;"><i class="ion-ios-pause"></i></a>
+    </div>
+    
+    
+    <!-- Audio player -->
+    <audio autoplay id="Musica-audio">
+        <source src="diversos/The Weeknd - Is There Someone Else_ (Audio) (320 kbps).mp3" type="audio/mp3">
+    </audio>
+
+<script>
+    var MusicaAudio = document.getElementById('Musica-audio');
+
+    var playBtn = document.getElementById('Musica-play');
+
+    var pauseBtn = document.getElementById('Musica-pause');
+
+    // Play audio & mostra pause btn
+    var playShow = function() {
+    MusicaAudio.play();
+    playBtn.style.display = "none";
+    lida.style.display = "none";
+    weeknd.style.display = "inline-block";
+    pauseBtn.style.display = "inline-block";
+    };
+
+    // Pause audio & mostra play btn
+    var pauseShow = function() {
+    MusicaAudio.pause();
+    playBtn.style.display = "inline-block";
+    lida.style.display = "inline-block";
+    weeknd.style.display = "none";
+    pauseBtn.style.display = "none";
+    };
+</script>
+</body>
+</html>

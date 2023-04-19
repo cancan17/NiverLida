@@ -1,0 +1,273 @@
+/* google fonts */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+}
+
+img {
+    width: 50vh;
+    border: solid 7px black;
+    border-radius: 4px;
+}
+
+.player-ctrl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+i {
+    font-size: 50px;
+    color: white;
+    line-height: 50px;
+    padding: 13px;
+}
+
+h1 {
+    font-family: sans-serif;
+    padding-left: 20px;
+    color: #222;
+    font-weight: 300;
+}
+
+a {
+    background-color: #482a64;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+
+/* desktop */
+body {
+    width: 100%; 
+      height: 100%; 
+      margin: 0 auto; 
+      background: #7f63b3;
+  }
+  
+  #balao h1 {
+      font-family: 'Concert One', cursive;
+      font-size: 60px; 
+      line-height: 80px; 
+      text-transform: uppercase;
+      letter-spacing: 4px; 
+      text-align: center;
+      font-weight: bold;
+      padding-top: 250px; 
+      color: #F8B1C1;
+  
+      /* animação da mensagem */ 
+    /* nome */
+      animation-name: texto;	
+      /* duração */
+      animation-duration: 2s; 
+      /* repetição */
+      animation-iteration-count: infinite;
+      /* direção */	
+      animation-direction: alternate-reverse;
+  }
+  
+  
+  /* passar de uma cor para outra */
+  @keyframes texto{
+      from{color: #F8B1C1;} 
+      to{color: #62C8A5;}
+  } 
+  
+  
+  .parabens{
+    display: flex;
+    justify-content: center;
+    margin: 3vh 0 14vh 0;
+  }
+  
+  
+  .baloes{
+    position:absolute;
+    top: 130px; 
+  }
+  
+  
+  /* animação dos balões */
+  .balao-1, .balao-2, .balao-3, .balao-4, .balao-5, .balao-6 {
+    display: inline-block;
+    width: 75px;
+    height: 90px;
+    position: relative;
+  
+    /* círculo */
+    border-radius: 50%;
+    animation-name: balao;
+    /* duração */
+    animation-duration: 3s; 
+    /* repetição */
+    animation-iteration-count: infinite;
+  }
+  
+  
+  /* cores e direções */ 
+  .balao-1{
+      background: #F8B1C1;
+      animation-direction: reverse;  
+  }
+  
+  
+  .balao-2{
+      background: #B0E7C6; 
+      animation-direction: alternate;
+  }
+  
+  
+  .balao-3{
+      background: #94DAF0; 
+      animation-direction: alternate-reverse; 
+  }
+  
+  
+  .balao-4{
+      background: #F0F4C1; 
+      animation-direction: reverse;  
+  }
+  
+  
+  .balao-5{
+      background: #FFC0BE; 
+      animation-direction: alternate;
+  }
+  
+  
+  .balao-6{
+      background: #B0E7C6; 
+      animation-direction: alternate-reverse; 
+  }
+  
+  
+  /* transformação */
+  @keyframes balao{
+    0%, 100% {transform: translateY(0) rotate(-9deg);}
+    50% {transform: translateY(-40px) rotate(7deg);}
+  }
+  
+  
+  /* inserir um bico em cada balão */
+  .balao-1:before {
+    /* forma do bico */
+    content: "▲";
+    /* tamanho */
+    font-size: 20px;
+    /* cor */
+    color: #F8B1C1; 
+    /* posição */
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    /*espaço para baixo */ 
+    bottom: -12px;
+  }
+  
+  
+  .balao-2:before {
+    content: "▲";
+    font-size: 20px;
+    color: #B0E7C6; 
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+  }
+  
+  
+  .balao-3:before {
+    content: "▲";
+    font-size: 20px;
+    color: #94DAF0; 
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+  }
+  
+  
+  .balao-4:before {
+    content: "▲";
+    font-size: 20px;
+    color: #F0F4C1;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+  }
+  
+  
+  .balao-5:before {
+    content: "▲";
+    font-size: 20px;
+    color: #FFC0BE; 
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+  }
+  
+  
+  .balao-6:before {
+    content: "▲";
+    font-size: 20px;
+    color: #BDBAB4; 
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+  }
+  
+  
+  
+  /*mobile*/
+  @media screen and (max-width: 1300px){
+      .balao-6{display: none;}
+  }
+  
+  
+  @media screen and (max-width: 1000px){
+      .balao-5{display: none;}
+  }
+  
+  
+  @media screen and (max-width: 800px){
+      h1{padding-top: 200px;}
+      .baloes{top: 90px;}
+      .balao-4{display: none;}	
+  }
+  
+  
+  @media screen and (max-width: 600px){
+      .parabens{width: 80%;}
+      .balao-4{display: inline-block;}
+      .balao-5{display: inline-block;}
+  }
+  
+  
+  @media screen and (max-width: 570px){
+      .balao-5{display: none;}
+  }
+  
+  
+  @media screen and (max-width: 400px){
+      h1{font-size: 50px;}
+      .parabens{width: 90%;}
+      .balao-4{display: none;}
+  }
+   
+  
+  /* criado por magda pimentel em 08/08/2017 */
